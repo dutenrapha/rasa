@@ -125,8 +125,9 @@ No arquivo stories.yml adiconar
  - network create: cria uma network
  -action_connect: nome da network 
 
-## 11 Criar um container rasa/rasa-sdk com o servidor action-server
+## 11 Entrar na pasta actions e criar um container rasa/rasa-sdk com o servidor action-server
 ```
+    cd actions
     docker run -v $(pwd):/app/actions --net action_connect --name action-server rasa/rasa-sdk
 ``` 
  - --net : nome da network
@@ -146,6 +147,17 @@ Alterando essa linha de comando o container que será criado a partir da imagem 
 ```
 - -it: Essa flag permite rodar o shell dentro do container
 - -p 5005:5005: Mapeamento das portas do containers
+
+## 14 Testar o boot
+Se tudo ocorreu bem, consersando com o bot de acordo com a conversa abaixo você consegui ser o Hello Word! 
+```
+    Your input ->  hi                                                                                                                             
+    Hey! How are you?
+    Your input ->  I wanna know more about your company                                                                                           
+    Hello World!
+
+```
+
 
 # Instalação do Rasa X 
 
