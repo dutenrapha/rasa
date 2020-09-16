@@ -112,7 +112,7 @@ No arquivo stories.yml adiconar
 
 ## 9. Criar uma imagem rasa/rasa-sdk a partir do Dockerfile
 ```
-    doker build -t rasa/rasa-sdk .
+    docker build -t rasa/rasa-sdk .
 ```
  - build: cria uma imagem a parir de um Dockerfile
  - -t rasa/rasa-sdk: nome da imagem 
