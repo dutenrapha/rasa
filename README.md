@@ -125,7 +125,7 @@ No arquivo stories.yml adiconar
  - network create: cria uma network
  -action_connect: nome da network 
 
-## 11 Criar um container rasa/rasa-sdk com o servidor
+## 11 Criar um container rasa/rasa-sdk com o servidor action-server
 ```
     docker run -v $(pwd):/app/actions --net action_connect --name action-server rasa/rasa-sdk
 ``` 
@@ -133,10 +133,16 @@ No arquivo stories.yml adiconar
  - name: nome do container 
  - rasa/rasa-sdk: nome da imagem
 
-## 12 no arquivo endpoints.yml desconmentar a action_endpoint: e alterar a url para
+## 12 No arquivo endpoints.yml desconmentar a action_endpoint: e alterar a url para
 ```
     action_endpoint:
         url: "http://action-server:5055/webhook"
+```
+Alterando essa linha de comando o container que será criado a partir da imagem rasa/rasa poderá se comunicar como container criar a patir da imagem rasa/rasa-sdk
+
+## 13 Conectar o servidor action-server com o container do rasa
+```
+    docker run --user 1000 -it -v $(pwd):/app -p 5005:5005 --net action_connect rasa/rasa shell
 ```
 
 # comandos úteis
