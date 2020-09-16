@@ -86,7 +86,6 @@ actions:
   - action_hello_world
 ```
 
-action_hello_world
 ## 7. Criar uma intent e uma storie para testar o custom comand
 No arquivo nlu.yml adiconar
 ```
@@ -148,7 +147,7 @@ Alterando essa linha de comando o container que será criado a partir da imagem 
 - -it: Essa flag permite rodar o shell dentro do container
 - -p 5005:5005: Mapeamento das portas do containers
 
-## 14 Testar o boot
+## 14 Testar o chatbot
 Se tudo ocorreu bem, consersando com o bot de acordo com a conversa abaixo você consegui ser o Hello Word! 
 ```
     Your input ->  hi                                                                                                                             
