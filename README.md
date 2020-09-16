@@ -71,8 +71,23 @@
             return []
 
 ```
+- action_hello_world: é equivaletente a uma utter padrão
 
-## 6. Criar uma intenção e uma storei para testar o custom comand
+## 6. Adicionar action_hello_world no arquivo domain.yml
+```
+actions:
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - utter_info
+  - action_hello_world
+```
+
+action_hello_world
+## 7. Criar uma intent e uma storie para testar o custom comand
 No arquivo nlu.yml adiconar
 ```
     - intent: Information
@@ -88,6 +103,40 @@ No arquivo stories.yml adiconar
       - intent: Information
       - action: action_hello_world
 
+```
+
+## 8. Treinar o modelo novamente
+```
+    docker run --user 1000 -v $(pwd):/app rasa/rasa train
+```
+
+## 9. Criar uma imagem rasa/rasa-sdk a partir do Dockerfile
+```
+    doker build -t rasa/rasa-sdk .
+```
+ - build: cria uma imagem a parir de um Dockerfile
+ - -t rasa/rasa-sdk: nome da imagem 
+ - .: diretório onde esta o Dockerfile 
+
+## 10. Para conectar o container rasa/rasa com o rasa/rasa-sdk preciamos criar uma network
+```
+    docker network create action_connect
+```
+ - network create: cria uma network
+ -action_connect: nome da network 
+
+## 11 Criar um container rasa/rasa-sdk com o servidor
+```
+    docker run -v $(pwd):/app/actions --net action_connect --name action-server rasa/rasa-sdk
+``` 
+ - --net : nome da network
+ - name: nome do container 
+ - rasa/rasa-sdk: nome da imagem
+
+## 12 no arquivo endpoints.yml desconmentar a action_endpoint: e alterar a url para
+```
+    action_endpoint:
+        url: "http://action-server:5055/webhook"
 ```
 
 # comandos úteis
