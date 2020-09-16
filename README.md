@@ -1,4 +1,4 @@
-# Instalação do Rasa, Rasa X e servidor para custom command 
+# Instalação do Rasa e de um servidor para actions via docker 
 
 ## 1. Instalar a imagem do rasa através do comando
 ```
@@ -144,14 +144,12 @@ Alterando essa linha de comando o container que será criado a partir da imagem 
 ```
     docker run --user 1000 -it -v $(pwd):/app -p 5005:5005 --net action_connect rasa/rasa shell
 ```
+- -it: Essa flag permite rodar o shell dentro do container
+- -p 5005:5005: Mapeamento das portas do containers
+
+# Instalação do Rasa X 
 
 # comandos úteis
-Acessar o chatbot do rasa via shell
-```
-    docker run -it --user 1000 -v $(pwd):/app rasa/rasa shell
-```
-- -it: Essa flag permite rodar o shell dentro do container
-
 Acessar o shell do container com usuário root
 ```
     docker excec -u root -it <hash id do container> /bin/bash
