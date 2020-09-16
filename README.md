@@ -152,7 +152,7 @@ Alterando essa linha de comando o container que será criado a partir da imagem 
 # comandos úteis
 Acessar o shell do container com usuário root
 ```
-    docker excec -u root -it <hash id do container> /bin/bash
+    docker exec -u root -it <hash id do container> /bin/bash
 ```
 
 
