@@ -19,3 +19,15 @@ slots:
 ```
   class summaryForm(FormAction):
 ```
+
+# 4. No arquvo incluir  config.yml FormPolicy como uma policy
+```
+  policies:
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+  # - name: FormPolicy
+    max_history: 5
+    epochs: 100
+  - name: RulePolicy
+  - name: RulePolicy
+```
