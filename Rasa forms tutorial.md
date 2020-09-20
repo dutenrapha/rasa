@@ -1,4 +1,4 @@
-#1. Adicionar slots no arquivo domain.wml
+# 1. Adicionar slots no arquivo domain.wml
 
 ```
 slots:
