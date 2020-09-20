@@ -1,6 +1,6 @@
 # 1. Adicionar slots no arquivo domain.yml
 
-```
+<pre>
 slots:
   id_number:
     type: unfeaturized
@@ -8,17 +8,17 @@ slots:
     type: unfeaturized
   subject:
     type: unfeaturized
-```
-# 2. No arquivo actions.py importar a biblioteca FormAction
-```
-  from rasa_sdk.forms import FormAction
+</pre>
 
-```
+# 2. No arquivo actions.py importar a biblioteca FormAction
+<pre>
+  from rasa_sdk.forms import FormAction
+</pre>
 
 # 3. No arquivo actions.py inserir uma classe cujo único argumento é FormAction
-```
+<pre>
   class summaryForm(FormAction):
-```
+</pre>
 
 # 4. No arquvo incluir  config.yml FormPolicy como uma policy
 <pre>
