@@ -25,7 +25,7 @@ slots:
   policies:
   - name: MemoizationPolicy
   - name: TEDPolicy
-  <b>- name: FormPolicy<b>
+  <b>- name: FormPolicy</b>
     max_history: 5
     epochs: 100
   - name: RulePolicy
