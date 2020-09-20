@@ -1,4 +1,4 @@
-# 1. Adicionar slots no arquivo domain.wml
+# 1. Adicionar slots no arquivo domain.yml
 
 ```
 slots:
@@ -8,4 +8,14 @@ slots:
     type: unfeaturized
   subject:
     type: unfeaturized
+```
+# 2. No arquivo actions.py importar a biblioteca FormAction
+```
+  from rasa_sdk.forms import FormAction
+
+```
+
+# 3. No arquivo actions.py inserir uma classe cujo único argumento é FormAction
+```
+  class summaryForm(FormAction):
 ```
