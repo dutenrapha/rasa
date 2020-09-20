@@ -21,7 +21,7 @@ slots:
 ```
 
 # 4. No arquvo incluir  config.yml FormPolicy como uma policy
-```
+<pre>
   policies:
   - name: MemoizationPolicy
   - name: TEDPolicy
@@ -30,4 +30,4 @@ slots:
     epochs: 100
   - name: RulePolicy
   - name: RulePolicy
-```
+</pre>
