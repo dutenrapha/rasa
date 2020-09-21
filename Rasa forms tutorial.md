@@ -95,11 +95,10 @@ class summaryForm(FormAction):
   policies:
   - name: MemoizationPolicy
   - name: TEDPolicy
-  <b>- name: FormPolicy</b>
     max_history: 5
     epochs: 100
   - name: RulePolicy
-  - name: RulePolicy
+  <b>- name: FormPolicy</b>
 </pre>
 
 ## 9. No arquivo stories.yml criar as stories para coletar as informações dos slots o comando form{"name": "summary_form"} ativa o formulario
