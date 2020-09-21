@@ -97,7 +97,6 @@ class summaryForm(FormAction):
   - name: TEDPolicy
     max_history: 5
     epochs: 100
-  - name: RulePolicy
   <b>- name: FormPolicy</b>
 </pre>
 
