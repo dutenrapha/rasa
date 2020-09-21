@@ -1,6 +1,6 @@
 # Tutorial sobre como adicionar um form no rasa
 
-## 1. Adicionar slots no arquivo domain.yml
+## 1. No arquivo domain.yml Adicionar slots e o nome do form
 
 <pre>
 slots:
@@ -10,6 +10,9 @@ slots:
     type: unfeaturized
   subject:
     type: unfeaturized
+
+forms:
+  - summary_form
 </pre>
 
 ## 2. No arquivo actions.py importar a biblioteca FormAction
@@ -87,7 +90,7 @@ class summaryForm(FormAction):
    - Sede
 </pre>
 
-## x. No arquvo incluir  config.yml FormPolicy como uma policy
+## 8. No arquivo config.yml incluir FormPolicy como uma policy
 <pre>
   policies:
   - name: MemoizationPolicy
@@ -99,6 +102,7 @@ class summaryForm(FormAction):
   - name: RulePolicy
 </pre>
 
+## 9. No arquivo stories.yml criar as stories para coletar as informações dos slots
 
 
 
