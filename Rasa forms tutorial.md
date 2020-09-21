@@ -110,7 +110,7 @@ class summaryForm(FormAction):
   - intent: greet
   - action: utter_greet
   - intent: outlook
-  <b>- form{"name": "summary_form"}<b>
+  <b>- form{"name": "summary_form"}</b>
   - action: utter_outlook
   - action: utter_ask_id_number
   - intent: id_number
