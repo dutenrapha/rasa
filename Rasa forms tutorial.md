@@ -73,7 +73,7 @@ class summaryForm(FormAction):
           }
 </pre>
 
-## 7. No arquivo NLU.yml criar as intençes id_number e uni_org
+## 7. No arquivo NLU.yml criar as intençes id_number e uni_org. Obs: Não esquecer de registrar essas intenções no arquvo domain.yml
 
 <pre>
 - intent: id_number
@@ -102,7 +102,20 @@ class summaryForm(FormAction):
   - name: RulePolicy
 </pre>
 
-## 9. No arquivo stories.yml criar as stories para coletar as informações dos slots
+## 9. No arquivo stories.yml criar as stories para coletar as informações dos slots o comando form{"name": "summary_form"} ativa o formulario
 
+<pre>
+- story: outlook
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: outlook
+  <b>- form{"name": "summary_form"}<b>
+  - action: utter_outlook
+  - action: utter_ask_id_number
+  - intent: id_number
+  - action: utter_ask_uni_org
+  - intent: uni_org
+</pre>
 
 
