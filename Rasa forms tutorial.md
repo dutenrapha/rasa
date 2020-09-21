@@ -53,10 +53,10 @@ class summaryForm(FormAction):
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
       return {
               "id_number": [
-                  self.from_entity(entity="sleep"),
+                  self.from_entity(entity="id_number"),
               ],
               "uni_org": [
-                  self.from_entity(entity="sleep"),
+                  self.from_entity(entity="uni_org"),
               ],
               "subject": [
                   self.from_text(intent="outlook"),
