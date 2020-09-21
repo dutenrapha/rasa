@@ -29,8 +29,7 @@ slots:
       return "summary_form"
 </pre>
 
-## 5. No arquivo actions.py na classe criada acima inserir a função required_slots, o valor do return  uma lista com o nome dos slots requeridos
-## Obs: adicionar o decorator  @staticmethod
+## 5. No arquivo actions.py na classe criada acima inserir a função required_slots, o valor do return  uma lista com o nome dos slots requeridos Obs: adicionar o decorator @staticmethod
 <pre>
   class summaryForm(FormAction):
     def name(self):
@@ -40,6 +39,33 @@ slots:
     def required_slots(tracker):
         return ["id_number", "uni_org", "subject"]
 </pre>
+
+## 6. No arquivo actions.py na classe criada acima inserir a função slot_mappings, o valor do return  é um dicionário mapeando o slot à uma das suas possveis fontes, entity, intent, uam mensagem ou uma lista deles. A primeira opção a dar match er utilizada para preencher o slot
+  class summaryForm(FormAction):
+    def name(self):
+      return "summary_form"
+    
+    @staticmethod
+    def required_slots(tracker):
+        return ["id_number", "uni_org", "subject"]
+        
+    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
+      return {
+              "id_number": [
+                  self.from_entity(entity="sleep"),
+              ],
+              "uni_org": [
+                  self.from_entity(entity="sleep"),
+              ],
+              "subject": [
+                  self.from_text(intent="outlook"),
+                  self.from_text(intent="vpn"),
+              ],
+          }
+    
+    
+</pre>
+
 
 
 ## x. No arquvo incluir  config.yml FormPolicy como uma policy
