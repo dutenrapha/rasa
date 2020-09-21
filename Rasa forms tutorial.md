@@ -43,28 +43,27 @@ slots:
 ## 6. No arquivo actions.py na classe criada acima inserir a função slot_mappings, o valor do return  é um dicionário mapeando o slot à uma das suas possveis fontes, entity, intent, uam mensagem ou uma lista deles. A primeira opção a dar match er utilizada para preencher o slot
 <pre>
 class summaryForm(FormAction):
+
     def name(self):
-      return "summary_form"
-    
+        return "summary_form"
+
     @staticmethod
     def required_slots(tracker):
         return ["id_number", "uni_org", "subject"]
-        
+
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
       return {
               "id_number": [
-                  self.from_entity(entity="id_number"),
+                  self.from_text(intent="id_number"),
               ],
               "uni_org": [
-                  self.from_entity(entity="uni_org"),
+                  self.from_text(intent="uni_org"),
               ],
               "subject": [
-                  self.from_text(intent="outlook"),
-                  self.from_text(intent="vpn"),
+                  self.from_entity(intent="outlook"),
+                  self.from_entity(intent="vpn"),
               ],
           }
-    
-    
 </pre>
 
 
