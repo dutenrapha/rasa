@@ -104,7 +104,7 @@ No arquivo stories.yml adiconar
 
 ## 8. Treinar o modelo novamente
 ```
-    docker run --user root -v $(pwd):/app rasa/rasa train
+    docker run --user root -v $(pwd):/app rasa/rasa:1.10.10 train
 ```
 
 ## 9. Criar uma imagem rasa/rasa-sdk a partir do Dockerfile
