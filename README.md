@@ -17,7 +17,7 @@
 
 ## 3. Criar um arquivo chamado Dockerfile com o seguinte conteúdo
 ```
-   FROM rasa/rasa-sdk
+   FROM rasa/rasa-sdk:1.10.2
 
    WORKDIR /app
 
@@ -125,7 +125,7 @@ No arquivo stories.yml adiconar
 ## 11 Entrar na pasta actions e criar um container rasa/rasa-sdk com o servidor action-server
 ```
     cd actions
-    docker run -v $(pwd):/app/actions --net action_connect --name action-server rasa/rasa-sdk
+    docker run -v $(pwd):/app/actions --net action_connect --name action-server rasa/rasa-sdk:1.10.2
 ``` 
  - --net : nome da network
  - name: nome do container 
