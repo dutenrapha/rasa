@@ -83,6 +83,7 @@ actions:
   - utter_happy
   - utter_goodbye
   - utter_iamabot
+  - utter_informarion
   - action_hello_world
 ```
 
