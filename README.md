@@ -2,12 +2,12 @@
 
 ## 1. Instalar a imagem do rasa através do comando
 ```
-    docker run --user 1000 -v $(pwd):/app rasa/rasa init -no-prompt
+    docker run --user root -it -v $(pwd):/app rasa/rasa:1.10.10 init
 ```
  - run: inicializa o container
- - --user 1000: cria um usuário chamado 1000
+ - --user root: loga com usuário root
  - -v $(pwd):/app: mapeia o diretório atual com o diretório app do container 
- - rasa/rasa init -no-prompt: inicializa o projeto default do rasa a patir da imagem "rasa/rasa" sem utilizar o prompt
+ - rasa/rasa:1.10.10 init inicializa o projeto default do rasa a patir da imagem "rasa/rasa" na versão 1.10.10
 
 ## 2. Treinar o modelo 
 ```
