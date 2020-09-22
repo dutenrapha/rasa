@@ -7,7 +7,7 @@
  - run: inicializa o container
  - --user root: loga com usuário root
  - -v $(pwd):/app: mapeia o diretório atual com o diretório app do container 
- - rasa/rasa:1.10.10 init inicializa o projeto default do rasa a patir da imagem "rasa/rasa" na versão 1.10.10
+ - rasa/rasa:1.10.10: init inicializa o projeto default do rasa a patir da imagem "rasa/rasa" na versão 1.10.10
 
 ## 2. Treinar o modelo 
 ```
