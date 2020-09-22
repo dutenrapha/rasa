@@ -5,8 +5,8 @@
     docker run --user root -it -v $(pwd):/app rasa/rasa:1.10.10 init
 ```
  - run: inicializa o container
-- -it: Essa flag permite rodar o shell dentro do container
  - --user root: loga com usuário root
+ - -it: Essa flag permite rodar o shell dentro do container
  - -v $(pwd):/app: mapeia o diretório atual com o diretório app do container 
  - rasa/rasa:1.10.10: init inicializa o projeto default do rasa a patir da imagem "rasa/rasa" na versão 1.10.10
 
