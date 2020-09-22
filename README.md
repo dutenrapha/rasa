@@ -83,25 +83,22 @@ actions:
   - utter_happy
   - utter_goodbye
   - utter_iamabot
-  - utter_informarion
   - action_hello_world
 ```
 
 ## 7. Criar uma intent e uma storie para testar o custom comand
 No arquivo nlu.yml adiconar
 ```
-    - intent: Information
-      examples: |
-        - tell me more about your company
-        - I want more information
-        - Can I get something else from your company?
+## intent:information
+- tell me more about your company
+- I want more information
+- Can I get something else from your company??
 ```
 No arquivo stories.yml adiconar
 ```
-    - story: information happy path
-      steps:
-      - intent: Information
-      - action: action_hello_world
+## information
+* information
+  - action_hello_world
 
 ```
 
