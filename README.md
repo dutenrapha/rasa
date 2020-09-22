@@ -140,7 +140,7 @@ Alterando essa linha de comando o container que será criado a partir da imagem 
 
 ## 13 Conectar o servidor action-server com o container do rasa
 ```
-    docker run --user 1000 -it -v $(pwd):/app -p 5005:5005 --net action_connect rasa/rasa shell
+    docker run --user 1000 -it -v $(pwd):/app -p 5005:5005 --net action_connect rasa/rasa:1.10.10 shell
 ```
 - -it: Essa flag permite rodar o shell dentro do container
 - -p 5005:5005: Mapeamento das portas do containers
