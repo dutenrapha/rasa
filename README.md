@@ -12,7 +12,7 @@
 
 ## 2. Treinar o modelo 
 ```
-    docker run --user 1000 -v $(pwd):/app rasa/rasa train
+    docker run --user 1000 -v $(pwd):/app rasa/rasa:1.10.10 train
 ```
 
 ## 3. Criar um arquivo chamado Dockerfile com o seguinte conteúdo
