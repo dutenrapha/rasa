@@ -1,0 +1,74 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - vpn
+  - outlook
+  - id_number
+  - uni_org
+  - piada
+  - clima
+  - sentido
+  - problema
+
+slots:
+  id_number:
+    type: unfeaturized
+    auto_fill: false
+  uni_org:
+    type: unfeaturized
+    auto_fill: false
+  subject:
+    type: unfeaturized
+    auto_fill: false
+
+forms:
+  - summary_form
+
+actions:
+  - utter_greet
+  - utter_piada
+  - utter_resp
+  - utter_clima
+  - utter_sentido
+  - utter_goodbye
+  - utter_ask_id_number
+  - utter_ask_uni_org
+  - utter_ask_subject
+  - utter_default
+
+responses:
+  utter_greet:
+  - text: "Olá, como posso de ajudar?"
+
+  utter_piada:
+  - text: "Qual o animal mais honesta do mundo?"
+
+  utter_resp:
+  - text: "A cobra, porque ela não passa a perna em ninguém"
+
+  utter_clima:
+  - text: "Faça chuva ou faça sol o clima sempre está bom para te ajudar"
+
+  utter_sentido:
+  - text: "42"
+
+  utter_goodbye:
+  - text: "Até mais"
+
+  utter_ask_id_number:
+  - text: "Qual é o número do seu ID?"
+  
+  utter_ask_uni_org:
+  - text: "Em qual local você está?"
+
+  utter_ask_subject:
+  - text: "Você pode ser um pouco mais específico, por favor"
+
+  utter_default:
+  - text: "Desculpe não entendi a sua resposta"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
