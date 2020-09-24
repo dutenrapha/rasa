@@ -64,7 +64,7 @@ responses:
   - text: "Em qual local você está?"
 
   utter_ask_subject:
-  - text: "Você pode ser um pouco mais específico, por favor"
+  - text: "Ainda não entendi o tema que você busca ajuda. Você pode ser um pouco mais específico, por favor"
 
   utter_default:
   - text: "Desculpe não entendi a sua resposta"
